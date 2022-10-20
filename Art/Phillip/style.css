@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bubbles-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#93a5cf, #e4efe9);
+}
+
+.bubbles {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 0.8rem;
+  -webkit-animation: in-and-out-bubbles 1.2s ease-in-out infinite;
+  animation: in-and-out-bubbles 1.2s ease-in-out infinite;
+}
+
+.bubble-1 {
+  -webkit-animation-delay: -0.35s;
+  animation-delay: -0.35s;
+}
+
+.bubble-2 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.bubble-3 {
+  -webkit-animation-delay: -0.15s;
+  animation-delay: -0.15s;
+}
+
+@keyframes in-and-out-bubbles {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes in-and-out-bubbles {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  20% {
+    -webkit-transform: scale(1);
+  }
+}
